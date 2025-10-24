@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-feedback-server",
+  "version": "1.0.0",
+  "description": "Small Express server to receive feedback and forward via email (nodemailer).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.5"
+  }
+}
