@@ -1,0 +1,86 @@
+:root{
+  --bg:#0f1724; /* deep navy */
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#06b6d4; /* cyan accent */
+  --glass: rgba(255,255,255,0.04);
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#071028);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+.container{width:100%;max-width:1100px;margin:0 auto;padding:2rem}
+.site-header{position:sticky;top:0;background:transparent;padding:.7rem 0;z-index:40}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.05rem}
+.nav{display:flex;gap:1rem}
+.nav a{color:var(--muted);text-decoration:none;padding:.25rem .5rem;border-radius:8px}
+.nav a:hover{color:#fff;background:var(--glass)}
+.nav-toggle{display:none;background:none;border:0;color:var(--muted);font-size:1.2rem}
+
+/* Hero */
+.hero{padding:4rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:center}
+.name{font-size:2.1rem;margin:.2rem 0}
+.profession{color:var(--accent);font-weight:600;margin:0}
+.tagline{color:var(--muted);max-width:50ch}
+.hero-image img{width:320px;height:320px;object-fit:cover;border-radius:18px;background:linear-gradient(135deg,var(--card),#071227);padding:1rem}
+.hero-ctas{margin-top:1rem;display:flex;gap:.6rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#00c5ff);color:#041022;border:0}
+.btn.outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+.section{padding:3.2rem 0}
+.bg-soft{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+.section-title{font-size:1.4rem;margin:0 0 1rem}
+.lead{color:var(--muted);}
+
+/* Projects grid */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.card-image{width:100%;height:160px;object-fit:cover;display:block}
+.card-body{padding:1rem}
+.card h3{margin:.25rem 0}
+.card p{color:var(--muted);margin:0}
+
+/* About grid */
+.about-grid{display:grid;grid-template-columns:220px 1fr;gap:1.2rem;align-items:center}
+.about-photo img{width:220px;height:220px;object-fit:cover;border-radius:16px}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.skill{background:var(--card);padding:1rem;border-radius:10px}
+.skill-head{display:flex;justify-content:space-between;margin-bottom:.5rem;color:var(--muted)}
+.progress{height:10px;background:#071227;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),#00e0ff);width:0;transition:width 1s ease}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 420px;gap:1.4rem;align-items:start}
+.contact-form{display:flex;flex-direction:column;gap:.7rem;background:var(--card);padding:1rem;border-radius:10px}
+.contact-form label{display:flex;flex-direction:column;color:var(--muted);font-size:.9rem}
+.contact-form input, .contact-form textarea{margin-top:.4rem;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.form-actions{display:flex;gap:.6rem;align-items:center}
+.form-status{color:var(--muted);font-size:.9rem}
+
+.site-footer{padding:1.2rem 0;color:var(--muted);text-align:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .nav-toggle{display:block}
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .progress-fill{transition:width 1s cubic-bezier(.2,.9,.3,1)}
+}
