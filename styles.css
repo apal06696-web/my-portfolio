@@ -32,7 +32,7 @@ body{
 .name{font-size:2.1rem;margin:.2rem 0}
 .profession{color:var(--accent);font-weight:600;margin:0}
 .tagline{color:var(--muted);max-width:50ch}
-.hero-image img{width:320px;height:320px;object-fit:cover;border-radius:18px;background:linear-gradient(135deg,var(--card),#071227);padding:1rem}
+.hero-image img{width:320px;height:320px;object-fit:cover;border-radius:300px;background:linear-gradient(135deg,var(--card),#071227);padding:1rem}
 .hero-ctas{margin-top:1rem;display:flex;gap:.6rem}
 .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:600}
 .btn.primary{background:linear-gradient(90deg,var(--accent),#00c5ff);color:#041022;border:0}
